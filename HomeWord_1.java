@@ -1,3 +1,10 @@
+/**
+* Java Basic. Home work #1
+*
+* @author Sergey Sanzarevskiy
+* @version 6.9.2022
+*
+*/
 class HomeWord_1 {
     public static void main(String[] args) {
         int var1 = (int) (Math.random() * 10 + 1);
