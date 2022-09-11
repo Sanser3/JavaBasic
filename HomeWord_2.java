@@ -4,16 +4,17 @@
 * @author Sergey Sanzarevskiy
 * @todo 10.9.2022
 * @date 7.9.2022
+* @changes 11.9.2022
 *
 */
 
 class HomeWord_2 {
     public static void main(String[] args) {
         //task1
-        checkWeather(-5);
-        checkWeather(0);
-        checkWeather(19);
-        checkWeather(29);
+        System.out.println(checkWeather(-5));
+        System.out.println(checkWeather(0));
+        System.out.println(checkWeather(19));
+        System.out.println(checkWeather(29));
         System.out.println();
 
         //task2
@@ -24,21 +25,27 @@ class HomeWord_2 {
         System.out.println();
 
         //task3
-        System.out.println("12 + 3 = " + arithmeticA(12, 3));
-        System.out.println("12 - 3 = " + arithmeticB(12, 3));
-        System.out.println("12 * 3 = " + arithmeticC(12, 3));
-        System.out.println("12 / 3 = " + arithmeticD(12, 3));
+        int a = 12;
+        int b = 0;
+        System.out.printf("%d + %d = %d\n", a, b, arithmeticA(a, b));
+        System.out.printf("%d - %d = %d\n", a, b, arithmeticB(a, b));
+        System.out.printf("%d * %d = %d\n", a, b, arithmeticC(a, b));
+        if (b != 0) {
+            System.out.printf("%d / %d = %.2f\n", a, b, arithmeticD(a, b));
+        } else {
+            System.out.println("Can't divide by zero");
+        }
         System.out.println();
 
         //task4
-        dayOfWeek(1);
-        dayOfWeek(2);
-        dayOfWeek(3);
-        dayOfWeek(4);
-        dayOfWeek(5);
-        dayOfWeek(6);
-        dayOfWeek(7);
-        dayOfWeek(8);
+        System.out.println(dayOfWeek(1));
+        System.out.println(dayOfWeek(2));
+        System.out.println(dayOfWeek(3));
+        System.out.println(dayOfWeek(4));
+        System.out.println(dayOfWeek(5));
+        System.out.println(dayOfWeek(6));
+        System.out.println(dayOfWeek(7));
+        System.out.println(dayOfWeek(8));
         System.out.println();
 
         //task5
@@ -66,65 +73,61 @@ class HomeWord_2 {
     }
 
         // task1
-        static void checkWeather(int temperature) {
+        static String checkWeather(int temperature) {
             if (temperature < 0) {
-                System.out.println("It's frost");
-            } else if (0 <= temperature && temperature <= 18) {
-                System.out.println("It's cold");
-            } else if (19 <= temperature && temperature <= 28) {
-                System.out.println("It's warm");
-            } else if (29 <= temperature)
-                System.out.println("It's hot");
+                return "It's frost";
+            } else if (temperature <= 18) {
+                return "It's cold";
+            } else if (temperature <= 28) {
+                return "It's warm";
+            } else {
+                return "It's hot";
+            }
         }
 
         // task2
-        static boolean canWalk(boolean isWeekend ,boolean isRain) {
-            if (isWeekend == true && isRain == true) {
-                return true;
+        static String canWalk(boolean isWeekend ,boolean isRain) {
+            if (isWeekend && isRain ) {
+                return "You can walk";
             } else {
-                return false;
+                return "You can't walk";
             }
         }
 
         // task3
         static int arithmeticA(int a, int b) {
-            return a + b;
-        } static int arithmeticB(int a, int b) {
+            return (int) a + b;
+        }
+        static int arithmeticB(int a, int b) {
             return a - b;
-        } static int arithmeticC(int a, int b) {
+        }
+        static int arithmeticC(int a, int b) {
             return a * b;
-        } static double arithmeticD(int a, int b) {
+        }
+        static float arithmeticD(int a, int b) {
             return a / b;
         }
 
         //task4
-        static int dayOfWeek(int args) {
+        static String dayOfWeek(int args) {
             switch (args) {
                 case 1:
-                    System.out.println("Monday");
-                    break;
+                    return "Monday";
                 case 2:
-                    System.out.println("Tuesday");
-                    break;
+                    return "Tuesday";
                 case 3:
-                    System.out.println("Wednesday");
-                    break;
+                    return "Wednesday";
                 case 4:
-                    System.out.println("Thursday");
-                    break;
+                    return "Thursday";
                 case 5:
-                    System.out.println("Friday");
-                    break;
+                    return "Friday";
                 case 6:
-                    System.out.println("Saturday");
-                    break;
+                    return "Saturday";
                 case 7 :
-                    System.out.println("Sunday");
-                    break;
+                    return "Sunday";
                 default:
-                    System.out.println("There is no such day");
+                    return "There is no such day";
                 }
-            return args;
             }
 
         //task5
@@ -149,7 +152,7 @@ class HomeWord_2 {
             double discriminant = b * b - 4 * a * c;
             if (discriminant < 0) {
                 System.out.println("No root");
-            } else if ((int)discriminant < 2) {
+            } else if (discriminant == 0) {
                 System.out.println("x = " + (double)(-b) / (2 * a));
             } else {
                 System.out.println("x1 = " + (double)((-b) + Math.sqrt(discriminant)) / (2 * a));
