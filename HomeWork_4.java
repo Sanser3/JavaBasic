@@ -106,6 +106,8 @@ class HomeWork_4 {
             } else {
                 System.out.println("Player WIN");
             }
+            computerO = 0;
+            playerO = 0;
             System.out.println("Repeat game?:  Y/N: ");
         } while (sc.nextLine().equals("Y"));
     }
