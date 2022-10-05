@@ -1,19 +1,9 @@
-public class Cat {
-    String name;
-    String color;
-    int age;
-
+public class Cat extends Animal implements IAnimal {
     public Cat(String name, String color, int age) {
-        this.name = name;
-        this.color = color;
-        this.age = age;
+        super(name, color, age);
     }
 
     public String voice() {
-        return name + ": meow!";
-    }
-
-    public String toString() {
-        return "Cat: " + name + ", color: " + color + ", age: " + age;
+        return "meow";
     }
 }
