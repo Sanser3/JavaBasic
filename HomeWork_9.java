@@ -3,7 +3,7 @@
  *
  * @author Sergey Sanzharevskiy
  * @todo 05.10.2022
- * @date 05.10.2022
+ * @date 06.10.2022
  *
  */
 public class HomeWork_9 {
