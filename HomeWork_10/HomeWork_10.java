@@ -57,7 +57,6 @@ public class HomeWork_10 extends JFrame {
         @Override
         public void paint(Graphics g) {
             super.paint(g);
-            // рисуем что хотим
             for (int i = 0; i < 500; i++) {
                 g.setColor(COLORS[random.nextInt(COLORS.length)]);
                 int x = random.nextInt(580);
@@ -65,14 +64,6 @@ public class HomeWork_10 extends JFrame {
                 int dx = random.nextInt(20);
                 int dy = random.nextInt(20);
 
-/**
-                if (random.nextBoolean()) {
-                    g.fillRect(x, y, dx, dy);
-                } else {
-                    g.fillOval(x, y, dx, dy);
-
-                }
-*/
                 g.fillOval(x, y, 10, 10);
             }
         }
