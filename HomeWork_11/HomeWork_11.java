@@ -7,6 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * JavaBasic. HomeWork #11
+ *
+ * @author Sergey Sanzharevskiy
+ * @todo 12.10.2022
+ * @date 16.10.2022
+ *
+ */
 public class HomeWork_11 extends JFrame {
     final int CANVAS_WIDTH = 600;
     final int CANVAS_HEIGHT = 500;
